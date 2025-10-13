@@ -1,0 +1,82 @@
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0;
+    position: relative;
+    min-height: 10vh;
+    z-index: 300;
+
+    background-color: hsl(240, 13%, 52%);
+    background: linear-gradient(to bottom, hsl(240, 13%, 52%), #fefefe);
+    
+    
+}
+
+.nav-logo-image {
+    max-width: 60px;
+    height: auto;
+    z-index: 500;
+}
+
+.nav-hamburger-image {
+    max-width: 30px;
+    height: auto;
+}
+
+.nav-options {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0 0 80%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 9rem;
+    gap: 4rem;
+
+    transition: all 0.4s ease;
+    
+
+}
+
+.nav-option {
+    position: relative;
+    margin-left: 4rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+
+    color: hsl(0, 1%, 22%);
+    font-weight: 10px;
+    font-size: 1.2rem;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(px);
+    background: hsla(240, 13%, 52%, 0);
+
+}
+
+.nav-option:hover {
+    background: hsla(0, 0%, 100%, 0.60);
+    box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.2);
+    color: black;
+    font-size: 1.4rem;
+}
+
+.hamburger-active {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 500;
+
+}
+
+.hamburger-inactive {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
