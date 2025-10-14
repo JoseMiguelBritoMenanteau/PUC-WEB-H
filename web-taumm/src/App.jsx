@@ -8,7 +8,38 @@ import './App.css'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar />,
+    element: ( <>
+      <Navbar />
+    </>
+  ),
+  },
+  {
+    path: '/login',
+    element: ( <>
+      <Navbar />
+    </>
+  ),
+  },
+  {
+    path: '/productos',
+    element: ( <>
+      <Navbar />
+    </>
+  ),
+  },
+  {
+    path: '/contacto',
+    element: ( <>
+      <Navbar />
+    </>
+  ),
+  },
+  {
+    path: '/catalogo',
+    element: ( <>
+      <Navbar />
+    </>
+  ),
   },
 ]);
 

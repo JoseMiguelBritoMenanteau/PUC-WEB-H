@@ -5,9 +5,11 @@ import { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 import Logo from '../../assets/logo-taumm-simple.png';
 import Hamburger from '../../assets/hamburger.png';
+import NavbarOptions from '../navbar-options/Navbar-options.jsx'
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isListOpen, setListOpen] = useState(false);
 
     function toggleMenu() {
         setIsMenuOpen(!isMenuOpen);
@@ -16,6 +18,13 @@ const Navbar = () => {
     function closeMenu() {
         setIsMenuOpen(false);
     };
+
+    const listProductos = [
+        {categoria: 'Todos', path: '/productos'},
+        {categoria: 'Griferías', path: '/griferias'},
+        {categoria: 'Cañerías', path: '/cañerias'},
+        {categoria: 'Accesorios', path: '/accesorios'}
+    ];
 
     return (
         <nav className='nav-container'>
@@ -28,8 +37,17 @@ const Navbar = () => {
             </Link>
 
             <ul className={`nav-options ${isMenuOpen ? 'nav-options-active' : 'nav-options-inactive'}`}>
-                <li>
-                    <Link to='/productos' className='nav-option'>Productos</Link>
+                <li onMouseEnter = {() => setListOpen(true)}
+                    onMouseLeave = {() => setListOpen(false)}>
+                    <div className="nav-option-expanded">
+                        <Link   to='/productos'
+                                className='nav-option'>Productos</Link>
+                        {isListOpen && (
+                            <div className = 'nav-options-panel'>
+                                <NavbarOptions list = {listProductos} />
+                            </div>   
+                        )} 
+                    </div>
                 </li>
                 <li>
                     <Link to='/catalogo' className='nav-option'>Catálogo</Link>

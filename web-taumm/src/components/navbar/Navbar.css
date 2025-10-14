@@ -80,3 +80,19 @@
     cursor: pointer;
     
 }
+
+.nav-option-expanded {
+    position: relative;
+    /* Esta altura mínima asegura que el área de hover sea más grande */
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-options-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 4rem;
+    z-index: 600;
+}
