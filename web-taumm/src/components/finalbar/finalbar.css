@@ -1,0 +1,98 @@
+
+.finalbar-container {
+	background: #f7f9fb;
+	color: #222;
+	padding: 2.5rem 1rem 1rem 1rem;
+	margin-top: 3rem;
+	border-top: 1px solid #e0e0e0;
+	font-size: 1rem;
+}
+
+.finalbar-main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.finalbar-logo-col {
+	min-width: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1.2rem;
+}
+
+.finalbar-logo {
+	max-width: 120px;
+	margin-bottom: 0.5rem;
+}
+
+.finalbar-social a {
+	margin-right: 0.7rem;
+	color: #222;
+	font-size: 1.3rem;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+.finalbar-social a:hover {
+	color: #0077b6;
+}
+
+.finalbar-cols {
+	display: flex;
+	gap: 2.5rem;
+	flex-wrap: wrap;
+}
+
+.finalbar-cols h4 {
+	margin-bottom: 0.7rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.finalbar-cols ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.finalbar-cols li {
+	margin-bottom: 0.5rem;
+}
+
+.finalbar-cols a {
+	color: #222;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+.finalbar-cols a:hover {
+	color: #0077b6;
+}
+
+.finalbar-bottom {
+	margin-top: 2.5rem;
+	text-align: center;
+	font-size: 0.95rem;
+	color: #666;
+}
+
+.finalbar-legal {
+	margin-top: 0.7rem;
+	font-size: 0.85rem;
+	color: #888;
+}
+
+@media (max-width: 800px) {
+	.finalbar-main {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2rem;
+	}
+	.finalbar-cols {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+}
