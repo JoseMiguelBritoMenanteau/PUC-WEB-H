@@ -7,9 +7,15 @@ import Logo from '../../assets/logo-taumm-simple.png';
 import Hamburger from '../../assets/hamburger.png';
 import NavbarOptions from '../navbar-options/Navbar-options.jsx'
 
+// EL FUNCIONAMIENTO DEL BOTÓN HAMBURGUESA Y PANTALLA RESPONSIVA SERÁ LA ÚLTIMA PRIORIDAD
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isListOpen, setListOpen] = useState(false);
+
+    const [isProductosOpen, setProductosOpen] = useState(false);
+    const [isCatalogoOpen, setCatalogoOpen] = useState(false);
+    const [isLoginOpen, setLoginOpen] = useState(false);
+
 
     function toggleMenu() {
         setIsMenuOpen(!isMenuOpen);
@@ -23,7 +29,18 @@ const Navbar = () => {
         {categoria: 'Todos', path: '/productos'},
         {categoria: 'Griferías', path: '/griferias'},
         {categoria: 'Cañerías', path: '/cañerias'},
+        {categoria: 'Duchas', path: '/duchas'},
+        {categoria: 'Fitting', path: '/fitting'},
+        {categoria: 'Lavaplatos', path: '/lavaplatos'},
         {categoria: 'Accesorios', path: '/accesorios'}
+    ];
+
+    const listSignIn = [
+        {categoria: 'Iniciar Sesión', path: '/iniciarsesion'}
+    ];
+
+    const listSignedIn = [
+        {categoria: 'Perfil', path: '/Perfil'}
     ];
 
     return (
@@ -37,26 +54,38 @@ const Navbar = () => {
             </Link>
 
             <ul className={`nav-options ${isMenuOpen ? 'nav-options-active' : 'nav-options-inactive'}`}>
-                <li onMouseEnter = {() => setListOpen(true)}
-                    onMouseLeave = {() => setListOpen(false)}>
+                <li onMouseEnter = {() => setProductosOpen(true)}
+                    onMouseLeave = {() => setProductosOpen(false)}>
                     <div className="nav-option-expanded">
                         <Link   to='/productos'
                                 className='nav-option'>Productos</Link>
-                        {isListOpen && (
-                            <div className = 'nav-options-panel'>
-                                <NavbarOptions list = {listProductos} />
-                            </div>   
+                        {isProductosOpen && (
+                            <NavbarOptions list = {listProductos} />
+                        )} 
+                    </div>
+                </li>
+                <li onMouseEnter = {() => setCatalogoOpen(true)}
+                    onMouseLeave = {() => setCatalogoOpen(false)}>
+                    <div className="nav-option-expanded">
+                        <Link to='/catalogo' className='nav-option'>Catálogo</Link>
+                        {isCatalogoOpen && (
+                            <NavbarOptions list = {listProductos} />  
                         )} 
                     </div>
                 </li>
                 <li>
-                    <Link to='/catalogo' className='nav-option'>Catálogo</Link>
+                    <div className = 'nav-option-expanded'>
+                        <Link to='/contacto' className='nav-option'>Contacto</Link>
+                    </div>
                 </li>
-                <li>
-                    <Link to='/contacto' className='nav-option'>Contacto</Link>
-                </li>
-                <li>
-                    <Link to='/login' className='nav-option'>Login</Link>
+                <li onMouseEnter = {() => setLoginOpen(true)}
+                    onMouseLeave = {() => setLoginOpen(false)}>
+                    <div className="nav-option-expanded">
+                        <Link to='/iniciarsesion' className='nav-option'>Login</Link>
+                        {isLoginOpen && (
+                            <NavbarOptions list = {listSignIn} />  
+                        )} 
+                    </div>
                 </li>
             </ul>
 
