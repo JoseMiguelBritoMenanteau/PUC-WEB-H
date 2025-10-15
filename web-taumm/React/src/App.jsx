@@ -7,7 +7,9 @@ import Navbar from './components/navbar/Navbar.jsx';
 import FinalBar from './components/finalbar/finalbar.jsx';
 import './App.css';
 import Construction from './components/pages/Construction/construction.jsx';
-import SignInBox from './components/pages/login/login.jsx'
+import SignInBox from './components/pages/login/login.jsx';
+import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
+        <CatalogoMonomandos />
         <FinalBar />
       </>
     ),
