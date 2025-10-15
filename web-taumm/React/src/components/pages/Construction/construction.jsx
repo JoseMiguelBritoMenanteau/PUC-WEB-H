@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import "./construction.css";
-import Logo from '../../assets/logo-taumm-simple.png';
-import constructionImage from '../../assets/under-construction.png';
+import Logo from '../../../assets/logo-taumm-simple.png';
+import constructionImage from '../../../assets/under-construction.png';
 
 export default function Construction() {
     const navigate = useNavigate();

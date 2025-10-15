@@ -6,7 +6,7 @@ import { RouterProvider } from "react-router/dom";
 import Navbar from './components/navbar/Navbar.jsx';
 import FinalBar from './components/finalbar/finalbar.jsx';
 import './App.css';
-import Construction from './pages/Construction/construction.jsx';
+import Construction from './components/pages/Construction/construction.jsx';
 
 const router = createBrowserRouter([
   {
