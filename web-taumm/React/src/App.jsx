@@ -8,8 +8,10 @@ import FinalBar from './components/finalbar/finalbar.jsx';
 import './App.css';
 import Construction from './components/pages/Construction/construction.jsx';
 import SignInBox from './components/pages/login/login.jsx';
-import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
 
+import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
+import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
+import CatalogoAccBano from './components/data/Acc Baño/accbaño.jsx';
 
 const router = createBrowserRouter([
   {
@@ -54,6 +56,8 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <CatalogoMonomandos />
+        <CatalogoAccDucha />
+        <CatalogoAccBano />
         <FinalBar />
       </>
     ),
