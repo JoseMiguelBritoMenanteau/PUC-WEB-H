@@ -12,6 +12,12 @@ import SignInBox from './components/pages/login/login.jsx';
 import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
 import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
 import CatalogoAccBano from './components/data/Acc Baño/accbaño.jsx';
+import CatalogoGriferiaGeneral from './components/data/Griferia General/griferia-general.jsx';
+import CatalogoFlexibles from './components/data/Flexibles/flexibles.jsx';
+import CatalogoValvulas from './components/data/Valvulas/valvulas.jsx';
+import CatalogoLLaves from './components/data/Llaves/llaves.jsx';
+import CatalogoFitingBonce from './components/data/Fiting Bonce/fitingbonce.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -58,6 +64,11 @@ const router = createBrowserRouter([
         <CatalogoMonomandos />
         <CatalogoAccDucha />
         <CatalogoAccBano />
+        <CatalogoGriferiaGeneral />
+        <CatalogoFlexibles />
+        <CatalogoValvulas />
+        <CatalogoLLaves />
+        <CatalogoFitingBonce />
         <FinalBar />
       </>
     ),
