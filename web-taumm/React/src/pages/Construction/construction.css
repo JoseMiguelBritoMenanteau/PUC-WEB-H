@@ -1,0 +1,23 @@
+.construction-container{
+    align-items: center;
+    justify-content: center;
+    background: #f7f9fb;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    position: relative;
+}
+
+.construction-logo{
+    position: absolute;
+    cursor: pointer;
+    height: auto;
+    top: 24px;
+    left: 24px;
+    width: 60px;
+}
+
+.construction-image{
+    width: 120px;
+    margin-bottom: 32px;
+}
