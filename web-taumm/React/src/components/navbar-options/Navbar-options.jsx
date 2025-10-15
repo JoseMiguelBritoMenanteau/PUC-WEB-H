@@ -7,9 +7,9 @@ function NavbarOptions(props) {
     return (
         <div>
             <ul className='nav-options-list'>
-                {props.list.map(producto => (
-                    <li key = {producto.categoria}>
-                        <Link to = {producto.path}>{producto.categoria}</Link>
+                {props.list.map(item => (
+                    <li key = {item.categoria}>
+                        <Link to = {item.path}>{item.categoria}</Link>
                     </li>
                 ))}
             </ul>

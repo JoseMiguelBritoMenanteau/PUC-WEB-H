@@ -1,0 +1,95 @@
+.sign-in-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: auto;
+    width: 30vw;
+    min-width: 200px;
+    max-width: 350px;
+
+    margin: 3rem auto;
+    margin-top: 25vh;
+    padding: 0.2rem 2rem;
+    padding-bottom: 4rem;
+    text-decoration: none;
+    
+    border-radius: 10px;
+    color: hsl(0, 1%, 22%);
+
+    transition: all 0.4s ease;
+    backdrop-filter: blur(8px);
+    background: hsla(240, 13%, 52%, 0.185);
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+}
+
+.sign-in-box-title {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+
+    backdrop-filter: blur(8px);
+    background: hsla(0, 0%, 100%, 0.133);
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+}
+
+.sign-in-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.sign-in-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+
+    border: 1px solid #ccccccc4;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #434343;
+
+    background: rgba(255, 255, 255, 0.732);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+}
+
+
+.sign-in-input:focus {
+    outline: none;
+    border-color: #53a1f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.4);
+    backdrop-filter: blur(8px);
+    background: #fefefe;
+}
+.sign-in-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fefefe;
+    cursor: pointer;
+
+    background: #569beac4;
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in-box-footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.sign-in-box-register-link {
+    color: hsl(0, 1%, 22%);
+    text-decoration: none;
+}
+
