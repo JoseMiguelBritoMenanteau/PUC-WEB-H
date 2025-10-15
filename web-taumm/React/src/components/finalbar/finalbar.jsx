@@ -40,7 +40,8 @@ const FinalBar = () => {
             <ul>
               <li><Link to="/faq">Preguntas frecuentes</Link></li>
               <li><a href="https://api.tusitio.cl" target="_blank" rel="noopener noreferrer">API</a></li>
-              <li><Link to="/como-llegar">Cómo llegar</Link></li>
+
+              <li><a href="https://maps.app.goo.gl/xHbyfLLbHjRzU6wN9" target="_blank" rel="noopener noreferrer">Como llegar</a></li>
             </ul>
           </div>
           <div>
