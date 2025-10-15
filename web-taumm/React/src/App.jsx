@@ -17,6 +17,13 @@ import CatalogoFlexibles from './components/data/Flexibles/flexibles.jsx';
 import CatalogoValvulas from './components/data/Valvulas/valvulas.jsx';
 import CatalogoLLaves from './components/data/Llaves/llaves.jsx';
 import CatalogoFitingBonce from './components/data/Fiting Bonce/fitingbonce.jsx';
+import CatalogoTemporizadas from './components/data/Temporizadas/temporizadas.jsx';
+import CatalogoFittingLaton from './components/data/Fitting Laton/fittinglaton.jsx';
+import CatalogoSanitaria from './components/data/Sanitaria/sanitaria.jsx';
+import CatalogoRepuestos from './components/data/Repuestos/repuestos.jsx';
+import CatalogoShowerDoor from './components/data/Shower Door/showerdoor.jsx';
+import CatalogoEspejoVanit from './components/data/Espejo Vanit/espejovanit.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -69,6 +76,12 @@ const router = createBrowserRouter([
         <CatalogoValvulas />
         <CatalogoLLaves />
         <CatalogoFitingBonce />
+        <CatalogoTemporizadas />
+        <CatalogoFittingLaton />
+        <CatalogoSanitaria />
+        <CatalogoRepuestos />
+        <CatalogoShowerDoor />
+        <CatalogoEspejoVanit />
         <FinalBar />
       </>
     ),
