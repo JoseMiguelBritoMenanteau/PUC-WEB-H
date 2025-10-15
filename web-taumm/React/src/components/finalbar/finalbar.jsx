@@ -61,9 +61,9 @@ const FinalBar = () => {
         </div>
       </div>
       <div className="finalbar-bottom">
-        <small>2025, TAUMM S.A. | Santiago, Chile</small>
+        <small>2025, Paradiso SCL | Santiago, Chile</small>
         <p className="finalbar-legal">
-          TAUMM es una empresa de ... no se que poner Todos los derechos reservados.
+          © Paradiso Sociedad Comercial Limitada | Todos los derechos reservados.
         </p>
       </div>
     </footer>

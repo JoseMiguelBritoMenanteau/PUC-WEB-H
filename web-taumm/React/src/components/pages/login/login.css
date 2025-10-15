@@ -1,0 +1,37 @@
+.sign-in-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 50vh;
+    width: 30vw;
+    min-width: 200px;
+    max-width: 350px;
+
+    margin: 3rem auto;
+    margin-top: 25vh;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    
+    border-radius: 10px;
+    color: hsl(0, 1%, 22%);
+
+    transition: all 0.4s ease;
+    backdrop-filter: blur(8px);
+    background: hsla(240, 13%, 52%, 0.185);
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
+}
+
+.sign-in-box-title {
+    position: relative;
+    top: -16vh;
+
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+
+    backdrop-filter: blur(8px);
+    background: hsla(0, 0%, 100%, 0.133);
+    box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.2);
+}
+
