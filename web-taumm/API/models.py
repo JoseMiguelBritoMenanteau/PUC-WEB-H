@@ -12,7 +12,7 @@ class Users(Base):
     hashed_password = Column(String)
     phone_number = Column(String)
     direction = Column(String)
-    is_approved = Column(Boolean, desault = False)
+    is_approved = Column(Boolean, default = False)
     account_type = Column(String, default = 'pending')
     created_at = Column(DateTime(timezone = True), server_default = func.now())
 
