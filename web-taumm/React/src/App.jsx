@@ -33,7 +33,7 @@ import CatalogoEspejoVanit from './components/data/Espejo Vanit/espejovanit.jsx'
 const PrivateRoute = ({ children}) => {
   const isAuthenticated = !!localStorage.getItem('token')
   return isAuthenticated ? children: <Navigate to = '/signin' />
-}
+};
 
 
 
@@ -114,7 +114,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar>
-          <Profile />
+        <Profile />
         </Navbar>
       </PrivateRoute>
     )
