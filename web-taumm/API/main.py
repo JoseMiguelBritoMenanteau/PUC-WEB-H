@@ -1,10 +1,10 @@
 from fastapi import FastAPI, status, Depends, HTTPException
 import models
 from database import engine, SessionLocal
-from typing import Annotated
+from typing import Annotated, List
 from sqlalchemy.orm import Session
 import auth
-from auth import get_current_user
+from auth import get_current_user, UserResponse
 
 app = FastAPI()
 app.include_router(auth.router)
@@ -27,6 +27,11 @@ async def user(user: user_dependency, db: db_dependency):
     if user is None:
         raise HTTPException(status_code = 401, detail = 'Autentificación Fallida')
     return {'User': user}
+
+@app.get('/users', response_model = List[UserResponse])
+async def get_all_users(db: db_dependency):
+    users = db.query(models.Users).all()
+    return users
 
 
 @app.delete('/users/me', status_code = status.HTTP_204_NO_CONTENT)

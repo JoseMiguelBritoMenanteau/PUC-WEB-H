@@ -33,6 +33,15 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
+class UserResponse(BaseModel):
+    id: int
+    username: str
+    email: str
+    phone_number: str
+    direction: str
+    class Config:
+        from_attributes = True
+
 def get_db():
     db = SessionLocal()
     try:
@@ -65,7 +74,7 @@ async def create_user(db: db_dependency,
 
     db.add(create_user_model)
     db.commit()
-    return {'message': 'Usuario registrado exitosamente. Esperando aprobación del administrador', 'username': create_user_request.username}
+    return {'message': 'Usuario registrado exitosamente', 'username': create_user_request.username}
 
 
 
@@ -77,10 +86,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
         raise HTTPException(status_code = status.HTTP_401_UNAUTHORIZED,
                             detail = 'Usuario / Contraseña Incorrecta')
     
-    if not user.is_approved:
-        raise HTTPException(status_code = status.HTTP_401_UNAUTHORIZED, detail = 'Cuenta pendiente de aprobación por el administrador')
-
-    token = create_access_token(user.username, user.id, user.account_type, timedelta(minutes = 120))
+    token = create_access_token(user.username, user.id, timedelta(minutes = 120))
     return {'access_token': token, 'token_type': 'bearer'}
 
 
@@ -100,6 +106,7 @@ def create_access_token(username: str, user_id: int, expires_delta: timedelta):
     expires = datetime.now(timezone.utc) + expires_delta
     encode.update({'exp': expires})
     return jwt.encode(encode, SECRET_KEY, algorithm = ALGORITHM)
+
 
 
 
