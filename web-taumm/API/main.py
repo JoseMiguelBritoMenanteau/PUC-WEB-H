@@ -4,12 +4,10 @@ from database import engine, SessionLocal
 from typing import Annotated
 from sqlalchemy.orm import Session
 import auth
-import admin
 from auth import get_current_user
 
 app = FastAPI()
 app.include_router(auth.router)
-app.include_router(admin.router)
 
 models.Base.metadata.create_all(bind = engine)
 
@@ -31,11 +29,18 @@ async def user(user: user_dependency, db: db_dependency):
     return {'User': user}
 
 
-@app.get('/account-status', status_code = status.HTTP_200_OK)
-async def account_status(user: user_dependency):
+@app.delete('/users/me', status_code = status.HTTP_204_NO_CONTENT)
+async def delete_own_user(user: user_dependency, db: db_dependency):
     if user is None:
-        raise HTTPException(status_code = 401, detail = 'Autentificación Fallida')
-    return user
+        raise HTTPException(status_code = status.HTTP_401_UNAUTHORIZED, detail = 'Autentificación Fallida')
+    
+    user_caso = db.query(models.Users).filter(models.Users.id == user['id']).first()
+
+    if user_caso is None:
+        raise HTTPException(status_code = status.HTTP_404_NOT_FOUND, detail = 'Usuario no encontrado')
+    
+    db.delete(user_caso)
+    db.commit()
 
 
 

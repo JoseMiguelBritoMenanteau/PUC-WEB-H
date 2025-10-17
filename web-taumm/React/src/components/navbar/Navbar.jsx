@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { useState, useRef, useEffect } from 'react';
 
 import './Navbar.css';
 import Logo from '../../assets/logo-taumm-simple.png';
 import Hamburger from '../../assets/hamburger.png';
 import NavbarOptions from '../navbar-options/Navbar-options.jsx'
+import '../navbar-options/Navbar-options.css'
 
 // EL FUNCIONAMIENTO DEL BOTÓN HAMBURGUESA Y PANTALLA RESPONSIVA SERÁ LA ÚLTIMA PRIORIDAD
 
@@ -15,6 +16,21 @@ const Navbar = () => {
     const [isProductosOpen, setProductosOpen] = useState(false);
     const [isCatalogoOpen, setCatalogoOpen] = useState(false);
     const [isLoginOpen, setLoginOpen] = useState(false);
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        setIsAuthenticated(!!token);
+    }, [])
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        setIsAuthenticated(false);
+        navigate('/')
+    }
 
 
     function toggleMenu() {
@@ -40,7 +56,8 @@ const Navbar = () => {
     ];
 
     const listSignedIn = [
-        {categoria: 'Perfil', path: '/Perfil'}
+        {categoria: 'Perfil', path: '/profile'},
+        {categoria: 'Cerrar Sesión', path: '#'}
     ];
 
     return (
@@ -55,6 +72,7 @@ const Navbar = () => {
                 </Link>
 
                 <ul className={`nav-options ${isMenuOpen ? 'nav-options-active' : 'nav-options-inactive'}`}>
+
                     <li onMouseEnter = {() => setProductosOpen(true)}
                         onMouseLeave = {() => setProductosOpen(false)}>
                         <div className="nav-option-expanded">
@@ -79,15 +97,45 @@ const Navbar = () => {
                             <Link to='/contacto' className='nav-option'>Contacto</Link>
                         </div>
                     </li>
-                    <li onMouseEnter = {() => setLoginOpen(true)}
-                        onMouseLeave = {() => setLoginOpen(false)}>
-                        <div className="nav-option-expanded">
-                            <Link to = '/signin' className = 'nav-option'>Login</Link>
-                            {isLoginOpen && (
-                                <NavbarOptions list = {listSignIn} />  
-                            )} 
-                        </div>
-                    </li>
+                    {isAuthenticated ? (
+                        <>
+                            <li onMouseEnter = {() => setProfileOpen(true)}
+                                onMouseLeave = {() => setProfileOpen(false)}>
+                                <div className = 'nav-option-expanded'>
+                                    <Link to = '/profile' className = 'nav-option'> Perfil </Link>
+                                    {isProfileOpen && (
+                                        <ul className='nav-options-list'>
+                                            {listSignedIn.map(item => (
+                                                <li key = {item.categoria}>
+                                                    {item.categoria === 'Cerrar Sesión' ? (
+                                                        <a onClick = {handleLogout}> Cerrar Sesión </a>
+                                                    ) : (
+                                                        <Link to = {item.path}>{item.categoria}</Link>
+                                                    )}
+                                                    
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+
+                            </li>
+                        </>
+                    ) : (
+                        <li onMouseEnter = {() => setLoginOpen(true)}
+                            onMouseLeave = {() => setLoginOpen(false)}>
+                            <div className="nav-option-expanded">
+                                <Link to = '/signin' className = 'nav-option'>Login</Link>
+                                {isLoginOpen && (
+                                    <NavbarOptions list = {listSignIn} />  
+                                )} 
+                            </div>
+                        </li>
+                    )}
+
+                    
+
+
                 </ul>
 
                 <button 

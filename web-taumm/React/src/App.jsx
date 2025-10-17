@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { PureComponent, useState } from 'react'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
+import { Navigate } from 'react-router';
 
 
 import Navbar from './components/navbar/Navbar.jsx';
@@ -11,6 +12,7 @@ import SignInBox from './components/pages/login/signin.jsx';
 import SignUpBox from './components/pages/login/signup.jsx';
 import LandPage from './components/pages/landpage/landpage.jsx';
 import Contacto from './components/pages/Contact/contacto.jsx';
+import Profile from './components/pages/profile/Profile.jsx'
 
 import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
 import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
@@ -26,6 +28,12 @@ import CatalogoSanitaria from './components/data/Sanitaria/sanitaria.jsx';
 import CatalogoRepuestos from './components/data/Repuestos/repuestos.jsx';
 import CatalogoShowerDoor from './components/data/Shower Door/showerdoor.jsx';
 import CatalogoEspejoVanit from './components/data/Espejo Vanit/espejovanit.jsx';
+
+
+const PrivateRoute = ({ children}) => {
+  const isAuthenticated = !!localStorage.getItem('token')
+  return isAuthenticated ? children: <Navigate to = '/signin' />
+}
 
 
 
@@ -61,10 +69,10 @@ const router = createBrowserRouter([
   {
     path: '/productos',
     element: (
-      <>
+      <PrivateRoute>
         <Navbar />
         <FinalBar />
-      </>
+      </PrivateRoute>
     ),
   },
   {
@@ -100,6 +108,18 @@ const router = createBrowserRouter([
       </>
     ),
   },
+
+  {
+    path: '/profile',
+    element: (
+      <PrivateRoute>
+        <Navbar>
+          <Profile />
+        </Navbar>
+      </PrivateRoute>
+    )
+  },
+
   {
     path: '*',
     element: (

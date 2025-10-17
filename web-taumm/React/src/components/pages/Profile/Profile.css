@@ -1,0 +1,23 @@
+
+
+
+.container-profile {
+    display: 'flex';
+    flex-direction: 'column';
+    align-items: 'center';
+    margin-top: 150px;
+}
+
+
+.delete-account-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
