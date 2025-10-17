@@ -79,6 +79,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
+        <Contacto />
         <FinalBar />
       </>
     ),
@@ -131,7 +132,10 @@ const router = createBrowserRouter([
 
 function App() {
 
-  return <RouterProvider router={router} />;
+  return (
+    <div className='App'>
+      <RouterProvider router={router} />
+    </div>
+  );
 }
-
 export default App;
