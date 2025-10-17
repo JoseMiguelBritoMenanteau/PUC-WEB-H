@@ -10,7 +10,7 @@
     max-width: 350px;
 
     margin: 3rem auto;
-    margin-top: 5vh;
+    margin-top: 2vh;
     padding: 0.2rem 2rem;
     padding-bottom: 4rem;
     text-decoration: none;
@@ -34,7 +34,7 @@
 
     backdrop-filter: blur(8px);
     background: hsla(0, 0%, 100%, 0.133);
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+    box-shadow: 1px 0px 5px hsla(0, 0%, 0%, 0.2);
 }
 
 .sign-in-form {

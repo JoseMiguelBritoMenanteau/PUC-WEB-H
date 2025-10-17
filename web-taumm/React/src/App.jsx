@@ -10,6 +10,7 @@ import Construction from './components/pages/Construction/construction.jsx';
 import SignInBox from './components/pages/login/signin.jsx';
 import SignUpBox from './components/pages/login/signup.jsx';
 import LandPage from './components/pages/landpage/landpage.jsx';
+import Contacto from './components/pages/Contact/contacto.jsx';
 
 import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
 import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
