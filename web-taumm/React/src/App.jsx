@@ -14,6 +14,7 @@ import LandPage from './components/pages/landpage/landpage.jsx';
 import Contacto from './components/pages/Contact/contacto.jsx';
 import Profile from './components/pages/profile/Profile.jsx'
 
+
 import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
 import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
 import CatalogoAccBano from './components/data/Acc Baño/accbaño.jsx';

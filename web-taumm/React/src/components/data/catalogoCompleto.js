@@ -1,33 +1,33 @@
 import monomandos from "./Monomandos/monomandos";
-import accducha from "./Acc Ducha/accducha";
-import accbaño from "./Acc Baño/accbaño";
+import accDucha from "./Acc Ducha/accducha";
+import accBano from "./Acc Baño/accbaño";
 import griferiaGeneral from "./Griferia General/griferia-general";
 import flexibles from "./Flexibles/flexibles";
 import valvulas from "./Valvulas/valvulas";
 import llaves from "./Llaves/llaves";
-import fitingbonce from "./Fiting Bonce/fitingbonce";
+import fitingBonce from "./Fiting Bonce/fitingbonce";
 import temporizadas from "./Temporizadas/temporizadas";
-import fittinglaton from "./Fitting Laton/fittinglaton";
+import fittingLaton from "./Fitting Laton/fittinglaton";
 import sanitaria from "./Sanitaria/sanitaria";
 import repuestos from "./Repuestos/repuestos";
-import showerdoor from "./Shower Door/showerdoor";
-import espejovanit from "./Espejo Vanit/espejovanit";
+import showerDoor from "./Shower Door/showerdoor";
+import espejoVanit from "./Espejo Vanit/espejovanit";
 
 const catalogoCompleto = [
   ...monomandos,
-  ...accducha,
-  ...accbaño,
+  ...accDucha,
+  ...accBano,
   ...griferiaGeneral,
   ...flexibles,
   ...valvulas,
   ...llaves,
-  ...fitingbonce,
+  ...fitingBonce,
   ...temporizadas,
-  ...fittinglaton,
+  ...fittingLaton,
   ...sanitaria,
   ...repuestos,
-  ...showerdoor,
-  ...espejovanit
+  ...showerDoor,
+  ...espejoVanit
 ];
 
 export default catalogoCompleto;

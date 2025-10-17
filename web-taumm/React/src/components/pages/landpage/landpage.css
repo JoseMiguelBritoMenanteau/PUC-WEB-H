@@ -1,11 +1,12 @@
 .landpage-container {
-    padding-top: 40px;
-    width: 100%;
+    padding-top: 60px;
+    width: 100vw;
     min-height: 100vh;
-    background: linear-gradient(120deg, aliceblue 0%, lavender 100%);
+    background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .landpage-title {
@@ -17,27 +18,56 @@
 }
 
 .carrusel-rodillo {
-    width: 90vw;
-    margin-bottom: 40px;
+    width: 80vw;
+    margin: 0 auto 60px auto;
     position: relative;
     overflow: hidden;
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+
 }
 
 .carrusel-inner {
-    gap: 32px;
+    gap: 40px;
     display: flex;
-    animation: rodillo 18s linear infinite;
+    transition: transform 0.5s;
+    width: 100%;
+    justify-content: flex-start;
 }
 
-@keyframes rodillo {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-60%);
-    }
+.carrusel-flecha{
+    border: 1px solid slategray;
+    border-radius: 50%;
+    background: white;
+    color: slategray;
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    transition: background 0.2s;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
+.carrusel-flecha:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.carrusel-flecha.izquierda {
+    left: 0;
+}
+.carrusel-flecha.derecha {
+    right: 0;
+}
 .producto-img {
     height: 120px;
     width: 120px;
@@ -59,4 +89,22 @@
     padding: 18px 12px;
     transition: transform 0.2s;  
 }
+.producto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px darkslategray;
+}
 
+.producto-info p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    text-align: center;
+    color: slategray;
+}
+
+.producto-info h2 {
+    font-size: 1.1rem;
+    color: darkslategray;
+    margin: 0 0 6px 0;
+    text-align: center;
+    font-weight: 600;
+}
