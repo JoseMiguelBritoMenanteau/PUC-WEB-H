@@ -36,7 +36,7 @@ const Navbar = () => {
     ];
 
     const listSignIn = [
-        {categoria: 'Iniciar Sesión', path: '/iniciarsesion'},
+        {categoria: 'Iniciar Sesión', path: '/signin'},
     ];
 
     const listSignedIn = [
@@ -82,7 +82,7 @@ const Navbar = () => {
                     <li onMouseEnter = {() => setLoginOpen(true)}
                         onMouseLeave = {() => setLoginOpen(false)}>
                         <div className="nav-option-expanded">
-                            <Link to='/iniciarsesion' className='nav-option'>Login</Link>
+                            <Link to = '/signin' className = 'nav-option'>Login</Link>
                             {isLoginOpen && (
                                 <NavbarOptions list = {listSignIn} />  
                             )} 

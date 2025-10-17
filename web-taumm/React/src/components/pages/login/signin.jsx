@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 
-import './login.css'
+import './signin.css'
 import { Link } from 'react-router';
 
 
@@ -21,10 +21,11 @@ const SignInBox = () => {
                 <button type="submit" className = 'sign-in-button'>Entrar</button>
             </form>
             <div className = 'sign-in-box-footer'>
-                <Link to = '/register' className = 'sign-in-box-register-link'> ¿No tienes una cuenta? Contáctate </Link>
+                <Link to = '/signup' className = 'sign-in-box-register-link'> ¿No tienes una cuenta? Regístrate </Link>
             </div>
         </div>
     )
 };
 
 export default SignInBox;
+

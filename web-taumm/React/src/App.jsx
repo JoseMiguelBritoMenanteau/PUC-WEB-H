@@ -7,8 +7,9 @@ import Navbar from './components/navbar/Navbar.jsx';
 import FinalBar from './components/finalbar/finalbar.jsx';
 import './App.css';
 import Construction from './components/pages/Construction/construction.jsx';
-import SignInBox from './components/pages/login/login.jsx';
-import Contacto from './components/pages/Contact/contacto.jsx';
+import SignInBox from './components/pages/login/signin.jsx';
+import SignUpBox from './components/pages/login/signup.jsx';
+import LandPage from './components/pages/landpage/landpage.jsx';
 
 import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
 import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
@@ -33,16 +34,26 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
+        <LandPage />
         <FinalBar />
       </>
     ),
   },
   {
-    path: '/iniciarsesion',
+    path: '/signin',
     element: (
       <>
         <Navbar />
         <SignInBox />
+      </>
+    ),
+  },
+  {
+    path: '/signup',
+    element: (
+      <>
+        <Navbar />
+        <SignUpBox />
       </>
     ),
   },
