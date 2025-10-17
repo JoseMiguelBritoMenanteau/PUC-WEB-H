@@ -32,7 +32,6 @@ class CreateUserRequest(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
-    account_type: str
 
 def get_db():
     db = SessionLocal()
@@ -62,8 +61,6 @@ async def create_user(db: db_dependency,
         hashed_password = bcrypt_context.hash(create_user_request.password),
         phone_number = create_user_request.phone_number,
         direction = create_user_request.direction,
-        is_approved = False,
-        account_type = 'pending'
     )
 
     db.add(create_user_model)
@@ -84,7 +81,7 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
         raise HTTPException(status_code = status.HTTP_401_UNAUTHORIZED, detail = 'Cuenta pendiente de aprobación por el administrador')
 
     token = create_access_token(user.username, user.id, user.account_type, timedelta(minutes = 120))
-    return {'access_token': token, 'token_type': 'bearer', 'account_type': user.account_type}
+    return {'access_token': token, 'token_type': 'bearer'}
 
 
 
@@ -98,8 +95,8 @@ def authenticate_user(username: str, password: str, db):
 
 
 
-def create_access_token(username: str, user_id: int, account_type: str, expires_delta: timedelta):
-    encode = {'sub': username, 'id': user_id, 'account_type': account_type}
+def create_access_token(username: str, user_id: int, expires_delta: timedelta):
+    encode = {'sub': username, 'id': user_id}
     expires = datetime.now(timezone.utc) + expires_delta
     encode.update({'exp': expires})
     return jwt.encode(encode, SECRET_KEY, algorithm = ALGORITHM)
@@ -111,33 +108,13 @@ async def get_current_user(token: Annotated[str, Depends(oauth_bearer)]):
         payload = jwt.decode(token, SECRET_KEY, algorithms = [ALGORITHM])
         username: str = payload.get('sub')
         user_id: int = payload.get('id')
-        account_type: str = payload.get('account_type')
         if username is None or user_id is None:
             raise HTTPException(status_code = status.HTTP_401_UNAUTHORIZED,
                                 detail = 'Validación del usuario fallida')
-        return {'username': username, 'id': user_id, 'account_type': account_type}
+        return {'username': username, 'id': user_id}
     except JWTError:
         raise HTTPException(status_code = status.HTTP_401_UNAUTHORIZED,
                             detail = 'Validación del usuario fallida')
     
 
 
-@router.post('create-master')
-async def create_master_user(db: db_dependency):
-    existing_master = db.query(Users).filter(Users.account_type == 'master').first()
-    if existing_master:
-        raise HTTPException(status_code = 400, detail = 'Ya existe un usuario Master')
-    
-    master_user = Users(
-        username = 'master',
-        email = 'rbrito@taumm.cl',
-        hashed_password = bcrypt_context.hash('masterpassword'),
-        phone_number = '+56974306798',
-        direction = 'Camino El Taqueral, Lampa, Región Metropolitana',
-        is_approved = 'True',
-        account_type = 'master'
-    )
-
-    db.add(master_user)
-    db.commit()
-    return {'message': 'Usuario Master creado exitosamente. Cambia la contraseña de inmediato'}
