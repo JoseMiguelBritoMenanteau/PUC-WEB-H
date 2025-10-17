@@ -24,7 +24,7 @@ const LandPage = () => {
 
     return (
         <div className='landpage-container'>
-            <h1 className='landpage-title'> Productos recomendados</h1>
+            <h1 className='landpage-title'> Nuestros Productos</h1>
             <div className= "carrusel-rodillo">
                 <button className='carrusel-flecha izquierda' onClick={handleLeft} > &lt; </button>
                 <div className='carrusel-inner'>
