@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
-        <LandPAge />
+        <LandPage />
         <FinalBar />
       </>
     ),

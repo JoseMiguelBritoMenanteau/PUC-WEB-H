@@ -23,6 +23,9 @@
     background: hsla(240, 13%, 52%, 0.185);
     box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
 }
+.jcsoa {
+    background: hsla(226, 24%, 49%, 0.848);
+}
 
 .sign-in-box-title {
     position: relative;
