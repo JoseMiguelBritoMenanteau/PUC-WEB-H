@@ -83,17 +83,27 @@ const Navbar = () => {
                 </Link>
 
                 <ul className={`nav-options ${isMenuOpen ? 'nav-options-active' : 'nav-options-inactive'}`}>
-
-                    <li onMouseEnter = {() => setProductosOpen(true)}
-                        onMouseLeave = {() => setProductosOpen(false)}>
-                        <div className="nav-option-expanded">
-                            <Link   to='/productos'
-                                    className='nav-option'>Productos</Link>
-                            {isProductosOpen && (
-                                <NavbarOptions list = {listProductos} />
-                            )} 
-                        </div>
-                    </li>
+                    {isAuthenticated ? (
+                        <li onMouseEnter = {() => setProductosOpen(true)}
+                            onMouseLeave = {() => setProductosOpen(false)}>
+                            <div className="nav-option-expanded">
+                                <Link   to='/productos'
+                                        className='nav-option'>Productos</Link>
+                                {isProductosOpen && (
+                                    <NavbarOptions list = {listProductos} />
+                                )} 
+                            </div>
+                        </li>
+                    ) : (
+                        <li onMouseEnter = {() => setProductosOpen(true)}
+                            onMouseLeave = {() => setProductosOpen(false)}>
+                            <div className="nav-option-expanded">
+                                <Link   to='/productos'
+                                        className='nav-option'>Productos</Link>
+                            </div>
+                        </li>
+                    )}
+                    
                     <li onMouseEnter = {() => setCatalogoOpen(true)}
                         onMouseLeave = {() => setCatalogoOpen(false)}>
                         <div className="nav-option-expanded">
@@ -110,8 +120,8 @@ const Navbar = () => {
                     </li>
                     {isAuthenticated ? (
                         <>
-                            <li onMouseEnter = {() => setProfileOpen(true)}
-                                onMouseLeave = {() => setProfileOpen(false)}>
+                            <li onMouseEnter = {() => setIsProfileOpen(true)}
+                                onMouseLeave = {() => setIsProfileOpen(false)}>
                                 <div className = 'nav-option-expanded'>
                                     <Link to = '/profile' className = 'nav-option'> Perfil </Link>
                                     {isProfileOpen && (

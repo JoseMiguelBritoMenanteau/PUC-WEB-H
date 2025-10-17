@@ -52,7 +52,7 @@ const SignInBox = () => {
 
                 <input className = 'sign-in-input' type="password" name="password" required placeholder = 'Contraseña' onChange = {(e) => setPassword(e.target.value)} />
 
-                {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
+                {error && <p style={{ color: 'red', textAlign: 'center', fontSize: '0.9rem' }}>{error}</p>}
 
                 <button type="submit" className = 'sign-in-button'>Entrar</button>
             </form>

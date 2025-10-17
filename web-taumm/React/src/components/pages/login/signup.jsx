@@ -67,8 +67,8 @@ const SignUpBox = () => {
 
                 <input className = 'sign-in-input' type="text" name="direction" required placeholder = 'Dirección' onChange = {e => setDirection(e.target.value)} />
 
-                {error && <p className = 'state-message'> {error} </p>}
-                {success && <p className = 'state-message'> {success} </p>}
+                {error && <p style={{ color: 'red', textAlign: 'center', fontSize: '0.9rem' } }> {error} </p>}
+                {success && <p style={{ color: 'black', textAlign: 'center', fontSize: '0.9rem' } } > {success} </p>}
 
                 <button type="submit" className = 'sign-in-button'>Entrar</button>
             </form>
