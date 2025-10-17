@@ -8,6 +8,7 @@ import FinalBar from './components/finalbar/finalbar.jsx';
 import './App.css';
 import Construction from './components/pages/Construction/construction.jsx';
 import SignInBox from './components/pages/login/login.jsx';
+import Contacto from './components/pages/Contact/contacto.jsx';
 
 import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
 import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
@@ -59,6 +60,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
+        <Contacto />
         <FinalBar />
       </>
     ),
@@ -99,7 +101,10 @@ const router = createBrowserRouter([
 
 function App() {
 
-  return <RouterProvider router={router} />;
+  return (
+    <div className='App'>
+      <RouterProvider router={router} />
+    </div>
+  );
 }
-
 export default App;
