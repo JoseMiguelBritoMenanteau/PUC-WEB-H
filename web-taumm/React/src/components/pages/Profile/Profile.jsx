@@ -34,7 +34,6 @@ const Profile = () => {
             <button onClick = {handleDeleteAccount} className = 'delete-account-button'>
                 Eliminar Cuenta
             </button>
-
         </div>
     );
 };
