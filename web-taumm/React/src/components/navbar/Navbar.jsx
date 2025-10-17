@@ -22,13 +22,24 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        const token = localStorage.getItem('token');
-        setIsAuthenticated(!!token);
-    }, [])
+        const checkAuthStatus = () => {
+            const token = localStorage.getItem('token');
+            setIsAuthenticated(!!token);
+        };
+        checkAuthStatus();
+
+        window.addEventListener('storage', checkAuthStatus);
+
+        return () => {
+            window.removeEventListener('storage', checkAuthStatus)
+        };
+        
+    }, []);
 
     const handleLogout = () => {
         localStorage.removeItem('token');
         setIsAuthenticated(false);
+        window.dispatchEvent(new Event('storage'));
         navigate('/')
     }
 
@@ -108,7 +119,7 @@ const Navbar = () => {
                                             {listSignedIn.map(item => (
                                                 <li key = {item.categoria}>
                                                     {item.categoria === 'Cerrar Sesión' ? (
-                                                        <a onClick = {handleLogout}> Cerrar Sesión </a>
+                                                        <a onClick = {handleLogout} style = {{ cursor: 'pointer' }}> Cerrar Sesión </a>
                                                     ) : (
                                                         <Link to = {item.path}>{item.categoria}</Link>
                                                     )}

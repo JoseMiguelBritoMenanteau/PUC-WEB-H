@@ -20,7 +20,7 @@ const SignUpBox = () => {
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        e.preventDefaul();
+        e.preventDefault();
         setError('');
         setSuccess('');
 
