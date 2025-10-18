@@ -8,6 +8,7 @@ import Hamburger from '../../assets/hamburger.png';
 import NavbarOptions from '../navbar-options/Navbar-options.jsx'
 import '../navbar-options/Navbar-options.css'
 
+
 // EL FUNCIONAMIENTO DEL BOTÓN HAMBURGUESA Y PANTALLA RESPONSIVA SERÁ LA ÚLTIMA PRIORIDAD
 
 const Navbar = () => {
@@ -164,6 +165,20 @@ const Navbar = () => {
                     onClick={toggleMenu}>
                         <img src={Hamburger} className='nav-hamburger-image'/>
                 </button>
+
+                {isMenuOpen && (
+                    <div className='sidebar-menu'>
+                        <ul>
+                            {/* Aquí puedes agregar más opciones si lo deseas */}
+                            <li>
+                                <Link to="/catalogo" className="sidebar-option" onClick={closeMenu}>Catálogo</Link>
+                            </li>
+                            <li>
+                                <Link to="/contacto" className="sidebar-option" onClick={closeMenu}>Contacto</Link>
+                            </li>
+                        </ul>
+                    </div>
+                )}
             </nav>
         </div>
     )
