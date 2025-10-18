@@ -59,42 +59,35 @@ const Profile = () => {
         fetchUserDetails();
     }, [navigate, logout]);
 
-    if (!currentUserDetails) {
-        return <div className = 'profile-page-container'> Cargando tus datos... </div>
-    };
 
     return (
-        //<div className = 'container-profile'>
-        //    <h2> Perfil de Usuario </h2>
-        //    <button onClick = {handleDeleteAccount} className = 'delete-account-button'>
-        //        Eliminar Cuenta
-        //    </button>
-        //</div>
+
         <div className='profile-page-container'>
             <div className='profile-header'>
                 <h1>Mi Perfil</h1>
-                <h2>Bienvenido de vuelta, {currentUserDetails.username}</h2>
+                <h2>Bienvenido al Paradiso, {currentUserDetails.username}</h2>
             </div>
 
             <div className='profile-content'>
-                <div className='profile-section'>
-                    <h3>Detalles de la Cuenta</h3>
+                <div className='section'>
+                    <h3> Tu Cuenta </h3>
                     <ul className="details-list">
-                        <li><strong>Nombre de Usuario:</strong> {currentUserDetails.username}</li>
-                        <li><strong>Email:</strong> {currentUserDetails.email}</li>
-                        <li><strong>Teléfono:</strong> {currentUserDetails.phone_number}</li>
-                        <li><strong>Dirección de Despacho:</strong> {currentUserDetails.direction}</li>
+                        <li> <strong> Nombre de Usuario: </strong> {currentUserDetails.username}</li>
+                        <li> <strong> Email: </strong> {currentUserDetails.email}</li>
+                        <li> <strong> Teléfono: </strong> {currentUserDetails.phone_number}</li>
+                        <li> <strong> Dirección de Despacho: </strong> {currentUserDetails.direction}</li>
                     </ul>
                 </div>
 
-                <div className='profile-section'>
-                    <h3>Mi Carrito</h3>
-                    <p className="empty-cart-message">Tu carrito de compras está vacío.</p>
+                {/*Para más adelante se tenía pensado agregar carrito, pero no dieron los tiempos*/}
+                <div className='section'>
+                    <h3> Mi Carrito </h3>
+                    <p>Datos del carro</p>
                 </div>
             </div>
 
             <div className='profile-actions'>
-                <button onClick={handleDeleteAccount} className='delete-account-button'>
+                <button onClick={handleDeleteAccount} className = 'delete-account-button'>
                     Eliminar Cuenta
                 </button>
             </div>
