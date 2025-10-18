@@ -31,6 +31,9 @@ import CatalogoShowerDoor from './components/data/Shower Door/showerdoor.jsx';
 import CatalogoEspejoVanit from './components/data/Espejo Vanit/espejovanit.jsx';
 
 
+import { useThemeContext, ThemeProvider } from './context/Context.jsx';
+
+
 const PrivateRoute = ({ children}) => {
   const isAuthenticated = !!localStorage.getItem('token')
   return isAuthenticated ? children: <Navigate to = '/signin' />
@@ -132,11 +135,17 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  const { theme, toggleTheme } = useThemeContext();
 
   return (
-    <div className='App'>
-      <RouterProvider router={router} />
-    </div>
+    <ThemeProvider>
+      <div className={`App ${theme}`}>
+        <button onClick={toggleTheme} style = {{position: "fixed", top: 20, right: 20, zIndex: 1000 }}>
+          Cambiar a modo {theme === 'light' ? 'oscuro' : 'claro'}
+        </button>
+        <RouterProvider router={router} />
+      </div>
+    </ThemeProvider>
   );
 }
 export default App;

@@ -2,5 +2,15 @@
   background-color: #fefefe;
   height: 100vh;
   width: 100%;
-  padding-top: 100px; /*Probando */
+  padding-top: 100px; 
+}
+
+.App.light {
+  background: white;
+  color: black;
+}
+
+.App.dark {
+  background: black;
+  color: white;
 }

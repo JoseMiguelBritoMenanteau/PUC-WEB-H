@@ -44,3 +44,35 @@ export const useAuthContext = () => {
     return useContext(Context);
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    setTheme(t => (t === 'light' ? 'dark' : 'light'));
+  }
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+export const useThemeContext = () => {
+  return useContext(ThemeContext);
+};
