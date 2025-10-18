@@ -1,6 +1,6 @@
 
 
-
+/*
 .container-profile {
     display: 'flex';
     flex-direction: 'column';
@@ -27,4 +27,112 @@
     border-radius: 5px;
 
     cursor: pointer;
+}
+*/
+.profile-page-container {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-header {
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.profile-header h2 {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+.profile-section {
+    background-color: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.profile-section h3 {
+    font-size: 1.4rem;
+    color: #111827;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.details-list {
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+}
+
+.details-list li {
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+.details-list li strong {
+    color: #374151;
+    margin-right: 8px;
+}
+
+.empty-cart-message {
+    color: #6b7280;
+    font-style: italic;
+}
+
+.profile-actions {
+    margin-top: 2.5rem;
+    text-align: right;
+}
+
+.delete-account-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.delete-account-button:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}
+
+.delete-account-button:active {
+    transform: translateY(0);
 }

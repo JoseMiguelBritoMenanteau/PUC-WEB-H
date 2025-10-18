@@ -48,6 +48,11 @@ async def get_all_users(db: db_dependency):
     users = db.query(models.Users).all()
     return users
 
+@app.get('/users/me', response_model = UserResponse)
+async def get_current_user(user: user_dependency, db: db_dependency):
+    user_details = user.query(models.Users).filter(models.Users.id == user['id']).first()
+    return user_details
+
 
 @app.delete('/users/me', status_code = status.HTTP_204_NO_CONTENT)
 async def delete_own_user(user: user_dependency, db: db_dependency):
