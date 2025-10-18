@@ -29,6 +29,7 @@ import CatalogoSanitaria from './components/data/Sanitaria/sanitaria.jsx';
 import CatalogoRepuestos from './components/data/Repuestos/repuestos.jsx';
 import CatalogoShowerDoor from './components/data/Shower Door/showerdoor.jsx';
 import CatalogoEspejoVanit from './components/data/Espejo Vanit/espejovanit.jsx';
+import CategoriasBar from './components/categoriasbar/categoriasbar.jsx';
 
 
 // import { ThemeProvider } from './context/Context.jsx';
@@ -94,6 +95,7 @@ const router = createBrowserRouter([
     element: (
       <>
         <Navbar />
+        <CategoriasBar />
         <CatalogoMonomandos />
         <CatalogoAccDucha />
         <CatalogoAccBano />
@@ -112,6 +114,163 @@ const router = createBrowserRouter([
       </>
     ),
   },
+  {
+    path: '/catalogo/monomandos',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoMonomandos />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/accducha',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoAccDucha />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/accbaño',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoAccBano />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/griferia-general',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoGriferiaGeneral />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/flexibles',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoFlexibles />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/valvulas',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoValvulas />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/llaves',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoLLaves />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/fitingbonce',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoFitingBonce />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/temporizadas',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoTemporizadas />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/fittinglaton',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoFittingLaton />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/sanitaria',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoSanitaria />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/repuestos',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoRepuestos />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/showerdoor',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoShowerDoor />
+        <FinalBar />
+      </>
+    ),
+  },
+  {
+    path: '/catalogo/espejovanit',
+    element: (
+      <>
+        <Navbar />
+        <CategoriasBar />
+        <CatalogoEspejoVanit />
+        <FinalBar />
+      </>
+    ),
+  },
+
+  
+
 
   {
     path: '/profile',
@@ -127,6 +286,7 @@ const router = createBrowserRouter([
     path: '*',
     element: (
       <>
+        <Navbar />
         <Construction />
         <FinalBar />
       </>

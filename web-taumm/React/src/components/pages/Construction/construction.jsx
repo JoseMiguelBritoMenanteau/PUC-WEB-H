@@ -9,14 +9,6 @@ export default function Construction() {
 
     return (
         <div className="construction-container">
-            <img 
-            src={Logo}
-            alt = "Taumm"
-            className="construction-logo"
-            onClick={() => navigate('/')}
-            title = "Volver al inicio"
-            style = {{cursor: 'pointer'}}
-            />
 
             <img 
             src = {constructionImage}
