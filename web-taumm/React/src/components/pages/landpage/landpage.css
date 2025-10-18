@@ -111,5 +111,55 @@
 
 
 .info-container {
-    display: 'grid';
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    gap: 3rem;
+    margin-left: 14%;
+    position: relative;
 }
+
+.info-container p {
+    text-align: justify;
+    
+}
+
+.info-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: midnightblue;
+    margin-bottom: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-bottom: 2px solid midnightblue;
+}
+
+.hq-image {
+    width: 73%;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    border-radius: 15px;
+    border: 2px solid midnightblue;
+}
+
+.industrial-ceo-image {
+    border-radius: 15px;
+    border: 2px solid midnightblue;
+}
+
+.info-container::after {
+  content: "";
+  position: absolute;
+  top: 5%;    
+  bottom: 15%; 
+  left: 33%;   
+  width: 2px;
+  background: midnightblue;
+  transform: translateX(-50%);
+}
+
+
+
+
+
