@@ -41,3 +41,4 @@ const CategoriasBar = () => (
 );
 
 export default CategoriasBar;
+

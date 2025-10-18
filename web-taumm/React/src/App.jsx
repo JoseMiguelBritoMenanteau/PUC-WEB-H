@@ -31,6 +31,21 @@ import CatalogoShowerDoor from './components/data/Shower Door/showerdoor.jsx';
 import CatalogoEspejoVanit from './components/data/Espejo Vanit/espejovanit.jsx';
 import CategoriasBar from './components/categoriasbar/categoriasbar.jsx';
 
+import CatalogoFittingLatonPrecio from './components/data/Fitting Laton/fittinglaton.jsx';
+import CatalogoMonomandosPrecio from './components/data/Monomandos/monomandos.jsx';
+import CatalogoSanitariaPrecio from './components/data/Sanitaria/sanitaria.jsx';
+import CatalogoRepuestosPrecio from './components/data/Repuestos/repuestos.jsx';
+import CatalogoShowerDoorPrecio from './components/data/Shower Door/showerdoor.jsx';
+import CatalogoEspejoVanitPrecio from './components/data/Espejo Vanit/espejovanit.jsx';
+import CatalogoAccDuchaPrecio from './components/data/Acc Ducha/accducja.jsx';
+import CatalogoAccBanoPrecio from './components/data/Acc Baño/accbaño.jsx';
+import CatalogoGriferiaGeneralPrecio from './components/data/Griferia General/griferia-general.jsx';
+import CatalogoFlexiblesPrecio from './components/data/Flexibles/flexibles.jsx';
+import CatalogoValvulasPrecio from './components/data/Valvulas/valvulas.jsx';
+import CatalogoLLavesPrecio from './components/data/Llaves/llaves.jsx';
+import CatalogoFitingBoncePrecio from './components/data/Fiting Bonce/fitingbonce.jsx';
+import CatalogoTemporizadasPrecio from './components/data/Temporizadas/temporizadas.jsx';
+
 
 // import { ThemeProvider } from './context/Context.jsx';
 
@@ -76,10 +91,167 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CatalogoMonomandosPrecio />
+        <CatalogoAccDuchaPrecio />
+        <CatalogoAccBanoPrecio />
+        <CatalogoGriferiaGeneralPrecio />
+        <CatalogoFlexiblesPrecio />
+        <CatalogoValvulasPrecio />
+        <CatalogoLLavesPrecio />
+        <CatalogoFitingBoncePrecio />
+        <CatalogoTemporizadasPrecio />
+        <CatalogoFittingLatonPrecio />
+        <CatalogoSanitariaPrecio />
+        <CatalogoRepuestosPrecio />
+        <CatalogoShowerDoorPrecio />
+        <CatalogoEspejoVanitPrecio />
         <FinalBar />
       </PrivateRoute>
     ),
   },
+
+  {
+    path: '/productos/monomandos',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoMonomandosPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/accducha',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoAccDuchaPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/accbano',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoAccBanoPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/griferia-general',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoGriferiaGeneralPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/flexibles',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoFlexiblesPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/valvulas',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoValvulasPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/llaves',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoLLavesPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/fitingbonce',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoFitingBoncePrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/temporizadas',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoTemporizadasPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/fittinglaton',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoFittingLatonPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/sanitarios',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoSanitariaPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/repuestos',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoRepuestosPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/showerdoor',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoShowerDoorPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: '/productos/espejovanit',
+    element: (
+      <PrivateRoute>
+        <Navbar />
+        <CatalogoEspejoVanitPrecio />
+        <FinalBar />
+      </PrivateRoute>
+    ),
+  },
+
+  
   {
     path: '/contacto',
     element: (

@@ -19,3 +19,22 @@ export default function CatalogoFittingLaton() {
     </div>
   );
 }
+
+export default function CatalogoFittingLatonPrecio() {
+  return (
+    <div>
+      <div className="catalogo-grid">
+        {fittingLaton.map((item) => (
+          <div className="catalogo-card" key={item.codigo}>
+            {item.foto && (
+              <img src={item.foto} alt={item.descripcion} className="catalogo-img" />
+            )}
+            <div className="catalogo-codigo">{item.codigo}</div>
+            <div className="catalogo-nombre">{item.descripcion}</div>
+            <div className="catalogo-precio">{item.precio}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

@@ -9,6 +9,7 @@ const accDucha = [
 		codigo: "020800102-T",
 		descripcion: "Brazo Ducha Plástico 15 cm",
 		foto: img1
+		
 	},
 	{
 		codigo: "020500701-T",
