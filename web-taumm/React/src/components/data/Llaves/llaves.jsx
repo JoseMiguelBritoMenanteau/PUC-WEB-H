@@ -2,7 +2,7 @@ import React from "react";
 import llaves from "./llaves";
 import "../catalogos.css";
 
-export default function CatalogoLlaves() {
+export function CatalogoLlaves() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoLlaves() {
   );
 }
 
-export default function CatalogoLlavesPrecioPrecio() {
+export function CatalogoLlavesPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

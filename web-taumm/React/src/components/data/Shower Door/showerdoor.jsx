@@ -2,7 +2,7 @@ import React from "react";
 import showerDoor from "./showerdoor";
 import "../catalogos.css";
 
-export default function CatalogoShowerDoor() {
+export  function CatalogoShowerDoor() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoShowerDoor() {
   );
 }
 
-export default function CatalogoShowerDoorPrecio() {
+export  function CatalogoShowerDoorPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

@@ -2,7 +2,7 @@ import React from "react";
 import valvulas from "./valvulas";
 import "../catalogos.css";
 
-export default function CatalogoValvulas() {
+export  function CatalogoValvulas() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoValvulas() {
   );
 }
 
-export default function CatalogoValvulasPrecio() {
+export  function CatalogoValvulasPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

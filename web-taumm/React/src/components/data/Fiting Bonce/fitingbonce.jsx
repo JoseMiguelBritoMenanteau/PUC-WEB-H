@@ -2,7 +2,7 @@ import React from "react";
 import fitingBonce from "./fitingbonce";
 import "../catalogos.css";
 
-export default function CatalogoFitingBonce() {
+export  function CatalogoFitingBonce() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoFitingBonce() {
   );
 }
 
-export default function CatalogoFitingBoncePrecio() {
+export  function CatalogoFitingBoncePrecio() {
   return (
     <div>
       <div className="catalogo-grid">

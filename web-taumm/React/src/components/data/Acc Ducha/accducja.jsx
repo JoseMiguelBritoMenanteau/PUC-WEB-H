@@ -2,7 +2,7 @@ import React from "react";
 import accDucha from "./accducha";
 import "../catalogos.css";
 
-export default function CatalogoAccDucha() {
+export  function CatalogoAccDucha() {
 	return (
 		<div>
 			<div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoAccDucha() {
 	);
 }
 
-export default function CatalogoAccDuchaPrecio() {
+export function CatalogoAccDuchaPrecio() {
 	return (
 		<div>
 			<div className="catalogo-grid">

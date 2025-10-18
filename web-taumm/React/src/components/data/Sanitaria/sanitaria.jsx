@@ -2,7 +2,7 @@ import React from "react";
 import sanitaria from "./sanitaria";
 import "../catalogos.css";
 
-export default function CatalogoSanitaria() {
+export  function CatalogoSanitaria() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoSanitaria() {
   );
 }
 
-export default function CatalogoSanitariaPrecio() {
+export  function CatalogoSanitariaPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

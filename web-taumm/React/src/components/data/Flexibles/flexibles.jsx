@@ -2,7 +2,7 @@ import React from "react";
 import flexibles from "./flexibles";
 import "../catalogos.css";
 
-export default function CatalogoFlexibles() {
+export function CatalogoFlexibles() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoFlexibles() {
   );
 }
 
-export default function CatalogoFlexiblesPrecio() {
+export  function CatalogoFlexiblesPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

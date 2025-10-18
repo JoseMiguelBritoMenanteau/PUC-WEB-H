@@ -2,7 +2,7 @@ import React from "react";
 import griferiaGeneral from "./griferia-general";
 import "../catalogos.css";
 
-export default function CatalogoGriferiaGeneral() {
+export  function CatalogoGriferiaGeneral() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoGriferiaGeneral() {
   );
 }
 
-export default function CatalogoGriferiaGeneralPrecio() {
+export  function CatalogoGriferiaGeneralPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

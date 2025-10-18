@@ -2,7 +2,7 @@ import React from "react";
 import temporizadas from "./temporizadas";
 import "../catalogos.css";
 
-export default function CatalogoTemporizadas() {
+export  function CatalogoTemporizadas() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoTemporizadas() {
   );
 }
 
-export default function CatalogoTemporizadasPrecio() {
+export  function CatalogoTemporizadasPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

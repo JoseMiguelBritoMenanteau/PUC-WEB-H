@@ -15,36 +15,37 @@ import Contacto from './components/pages/Contact/contacto.jsx';
 import Profile from './components/pages/profile/Profile.jsx'
 
 
-import CatalogoMonomandos from './components/data/Monomandos/monomandos.jsx';
-import CatalogoAccDucha from './components/data/Acc Ducha/accducja.jsx';
-import CatalogoAccBano from './components/data/Acc Baño/accbaño.jsx';
-import CatalogoGriferiaGeneral from './components/data/Griferia General/griferia-general.jsx';
-import CatalogoFlexibles from './components/data/Flexibles/flexibles.jsx';
-import CatalogoValvulas from './components/data/Valvulas/valvulas.jsx';
-import CatalogoLLaves from './components/data/Llaves/llaves.jsx';
-import CatalogoFitingBonce from './components/data/Fiting Bonce/fitingbonce.jsx';
-import CatalogoTemporizadas from './components/data/Temporizadas/temporizadas.jsx';
-import CatalogoFittingLaton from './components/data/Fitting Laton/fittinglaton.jsx';
-import CatalogoSanitaria from './components/data/Sanitaria/sanitaria.jsx';
-import CatalogoRepuestos from './components/data/Repuestos/repuestos.jsx';
-import CatalogoShowerDoor from './components/data/Shower Door/showerdoor.jsx';
-import CatalogoEspejoVanit from './components/data/Espejo Vanit/espejovanit.jsx';
+import { CatalogoMonomandos } from './components/data/Monomandos/monomandos.jsx';
+import { CatalogoAccDucha } from './components/data/Acc Ducha/accducja.jsx';
+import {CatalogoAccBano }from './components/data/Acc Baño/accbaño.jsx';
+import {CatalogoGriferiaGeneral} from './components/data/Griferia General/griferia-general.jsx';
+import {CatalogoFlexibles} from './components/data/Flexibles/flexibles.jsx';
+import {CatalogoValvulas} from './components/data/Valvulas/valvulas.jsx';
+import { CatalogoLlaves } from './components/data/Llaves/llaves.jsx';
+import {CatalogoFitingBonce} from './components/data/Fiting Bonce/fitingbonce.jsx';
+import {CatalogoTemporizadas} from './components/data/Temporizadas/temporizadas.jsx';
+import {CatalogoFittingLaton} from './components/data/Fitting Laton/fittinglaton.jsx';
+import {CatalogoSanitaria} from './components/data/Sanitaria/sanitaria.jsx';
+import {CatalogoRepuestos} from './components/data/Repuestos/repuestos.jsx';
+import {CatalogoShowerDoor} from './components/data/Shower Door/showerdoor.jsx';
+import {CatalogoEspejoVanit} from './components/data/Espejo Vanit/espejovanit.jsx';
 import CategoriasBar from './components/categoriasbar/categoriasbar.jsx';
 
-import CatalogoFittingLatonPrecio from './components/data/Fitting Laton/fittinglaton.jsx';
-import CatalogoMonomandosPrecio from './components/data/Monomandos/monomandos.jsx';
-import CatalogoSanitariaPrecio from './components/data/Sanitaria/sanitaria.jsx';
-import CatalogoRepuestosPrecio from './components/data/Repuestos/repuestos.jsx';
-import CatalogoShowerDoorPrecio from './components/data/Shower Door/showerdoor.jsx';
-import CatalogoEspejoVanitPrecio from './components/data/Espejo Vanit/espejovanit.jsx';
-import CatalogoAccDuchaPrecio from './components/data/Acc Ducha/accducja.jsx';
-import CatalogoAccBanoPrecio from './components/data/Acc Baño/accbaño.jsx';
-import CatalogoGriferiaGeneralPrecio from './components/data/Griferia General/griferia-general.jsx';
-import CatalogoFlexiblesPrecio from './components/data/Flexibles/flexibles.jsx';
-import CatalogoValvulasPrecio from './components/data/Valvulas/valvulas.jsx';
-import CatalogoLLavesPrecio from './components/data/Llaves/llaves.jsx';
-import CatalogoFitingBoncePrecio from './components/data/Fiting Bonce/fitingbonce.jsx';
-import CatalogoTemporizadasPrecio from './components/data/Temporizadas/temporizadas.jsx';
+import {CatalogoFittingLatonPrecio} from './components/data/Fitting Laton/fittinglaton.jsx';
+import {CatalogoMonomandosPrecio} from './components/data/Monomandos/monomandos.jsx';
+import {CatalogoSanitariaPrecio} from './components/data/Sanitaria/sanitaria.jsx';
+import {CatalogoRepuestosPrecio} from './components/data/Repuestos/repuestos.jsx';
+import {CatalogoShowerDoorPrecio} from './components/data/Shower Door/showerdoor.jsx';
+import {CatalogoEspejoVanitPrecio} from './components/data/Espejo Vanit/espejovanit.jsx';
+import {CatalogoAccDuchaPrecio} from './components/data/Acc Ducha/accducja.jsx';
+import {CatalogoAccBanoPrecio} from './components/data/Acc Baño/accbaño.jsx';
+import {CatalogoGriferiaGeneralPrecio} from './components/data/Griferia General/griferia-general.jsx';
+import {CatalogoFlexiblesPrecio} from './components/data/Flexibles/flexibles.jsx';
+import {CatalogoValvulasPrecio} from './components/data/Valvulas/valvulas.jsx';
+import { CatalogoLlavesPrecio } from './components/data/Llaves/llaves.jsx';
+import {CatalogoFitingBoncePrecio} from './components/data/Fiting Bonce/fitingbonce.jsx';
+import {CatalogoTemporizadasPrecio} from './components/data/Temporizadas/temporizadas.jsx';
+import CategoriasBarProductos from './components/categoriasbar/categoriasbarProductos.jsx';
 
 
 // import { ThemeProvider } from './context/Context.jsx';
@@ -91,13 +92,14 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoMonomandosPrecio />
         <CatalogoAccDuchaPrecio />
         <CatalogoAccBanoPrecio />
         <CatalogoGriferiaGeneralPrecio />
         <CatalogoFlexiblesPrecio />
         <CatalogoValvulasPrecio />
-        <CatalogoLLavesPrecio />
+        <CatalogoLlavesPrecio />
         <CatalogoFitingBoncePrecio />
         <CatalogoTemporizadasPrecio />
         <CatalogoFittingLatonPrecio />
@@ -115,6 +117,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoMonomandosPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -125,6 +128,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoAccDuchaPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -135,6 +139,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoAccBanoPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -145,6 +150,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoGriferiaGeneralPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -155,6 +161,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoFlexiblesPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -165,6 +172,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoValvulasPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -175,7 +183,8 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
-        <CatalogoLLavesPrecio />
+        <CategoriasBarProductos />
+        <CatalogoLlavesPrecio />
         <FinalBar />
       </PrivateRoute>
     ),
@@ -185,6 +194,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoFitingBoncePrecio />
         <FinalBar />
       </PrivateRoute>
@@ -195,6 +205,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoTemporizadasPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -205,6 +216,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoFittingLatonPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -215,6 +227,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoSanitariaPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -225,6 +238,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoRepuestosPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -235,6 +249,7 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoShowerDoorPrecio />
         <FinalBar />
       </PrivateRoute>
@@ -245,13 +260,14 @@ const router = createBrowserRouter([
     element: (
       <PrivateRoute>
         <Navbar />
+        <CategoriasBarProductos />
         <CatalogoEspejoVanitPrecio />
         <FinalBar />
       </PrivateRoute>
     ),
   },
 
-  
+
   {
     path: '/contacto',
     element: (
@@ -274,7 +290,7 @@ const router = createBrowserRouter([
         <CatalogoGriferiaGeneral />
         <CatalogoFlexibles />
         <CatalogoValvulas />
-        <CatalogoLLaves />
+        <CatalogoLlaves />
         <CatalogoFitingBonce />
         <CatalogoTemporizadas />
         <CatalogoFittingLaton />
@@ -358,7 +374,7 @@ const router = createBrowserRouter([
       <>
         <Navbar />
         <CategoriasBar />
-        <CatalogoLLaves />
+        <CatalogoLlaves />
         <FinalBar />
       </>
     ),

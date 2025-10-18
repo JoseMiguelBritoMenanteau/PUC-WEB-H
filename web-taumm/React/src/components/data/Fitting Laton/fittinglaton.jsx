@@ -2,7 +2,7 @@ import React from "react";
 import fittingLaton from "./fittinglaton";
 import "../catalogos.css";
 
-export default function CatalogoFittingLaton() {
+export  function CatalogoFittingLaton() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoFittingLaton() {
   );
 }
 
-export default function CatalogoFittingLatonPrecio() {
+export  function CatalogoFittingLatonPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

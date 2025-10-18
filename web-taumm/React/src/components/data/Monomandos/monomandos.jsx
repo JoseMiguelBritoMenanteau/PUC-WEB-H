@@ -2,7 +2,7 @@ import React from "react";
 import monomandos from "./monomandos";
 import "../catalogos.css";
 
-export default function CatalogoMonomandos() {
+export  function CatalogoMonomandos() {
     return (
         <div>
         
@@ -22,7 +22,7 @@ export default function CatalogoMonomandos() {
     );
 }
 
-export default function CatalogoMonomandosPrecio() {
+export  function CatalogoMonomandosPrecio() {
     return (
         <div>
             <div className="catalogo-grid">

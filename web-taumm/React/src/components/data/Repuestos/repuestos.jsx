@@ -2,7 +2,7 @@ import React from "react";
 import repuestos from "./repuestos";
 import "../catalogos.css";
 
-export default function CatalogoRepuestos() {
+export  function CatalogoRepuestos() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoRepuestos() {
   );
 }
 
-export default function CatalogoRepuestosPrecio() {
+export  function CatalogoRepuestosPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

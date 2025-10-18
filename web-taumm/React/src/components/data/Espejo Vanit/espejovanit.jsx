@@ -2,7 +2,7 @@ import React from "react";
 import espejoVanit from "./espejovanit";
 import "../catalogos.css";
 
-export default function CatalogoEspejoVanit() {
+export  function CatalogoEspejoVanit() {
   return (
     <div>
       <div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoEspejoVanit() {
   );
 }
 
-export default function CatalogoEspejoVanitPrecio() {
+export  function CatalogoEspejoVanitPrecio() {
   return (
     <div>
       <div className="catalogo-grid">

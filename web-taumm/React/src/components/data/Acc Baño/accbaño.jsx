@@ -2,7 +2,7 @@ import React from "react";
 import accBano from "./accbaño";
 import "../catalogos.css";
 
-export default function CatalogoAccBano() {
+export function CatalogoAccBano() {
 	return (
 		<div>
 			<div className="catalogo-grid">
@@ -20,7 +20,7 @@ export default function CatalogoAccBano() {
 	);
 }
 
-export default function CatalogoAccBanoPrecio() {
+export function CatalogoAccBanoPrecio() {
 	return (
 		<div>
 			<div className="catalogo-grid">
