@@ -1,34 +1,4 @@
 
-
-/*
-.container-profile {
-    display: 'flex';
-    flex-direction: 'column';
-    align-items: 'center';
-    margin-top: 150px;
-    max-width: 700px;
-    margin: 2rem auto;
-    background: hsla(240, 13%, 52%, 0.11);
-    box-shadow: 0px 1px 3px hsla(0, 0%, 0%, 0.2);
-    padding: 2.5rem 1.5rem;
-    border-radius: 16px;
-}
-
-
-.delete-account-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-
-
-    background-color: #f44336;
-    color: white;
-    font-size: 0.8rem;
-    border: none;
-    border-radius: 5px;
-
-    cursor: pointer;
-}
-*/
 .profile-page-container {
     max-width: 850px;
     margin: 2rem auto;
@@ -39,100 +9,81 @@
     animation: fadeIn 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-.profile-header {
+
+.profile-title {
     text-align: center;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 1.5rem;
-    margin-bottom: 2rem;
+    border-bottom: 3px solid #d8d8d8;
+    padding-bottom: 3%;
+    margin-bottom: 3rem;
 }
 
-.profile-header h1 {
+.profile-title h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: 'black';
     margin-bottom: 0.5rem;
 }
 
-.profile-header h2 {
+.profile-title h2 {
     font-size: 1.2rem;
-    color: #666;
-    font-weight: 400;
+    color: 'black';
+    font-weight: 10;
 }
 
 .profile-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
-.profile-section {
+.section {
     background-color: #f9fafb;
+    backdrop-filter: blur(20px);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #d9d7d7;
 }
 
-.profile-section h3 {
-    font-size: 1.4rem;
-    color: #111827;
-    margin-bottom: 1.2rem;
-    border-bottom: 1px solid #ddd;
+.section h3 {
+    font-size: 1.3rem;
+    color: 'black';
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid #d9d7d7;
     padding-bottom: 0.5rem;
 }
 
-.details-list {
+.user-data {
     list-style: none;
     padding: 0;
     line-height: 2;
 }
 
-.details-list li {
+.user-data li {
     font-size: 1rem;
-    color: #4b5563;
+    color: 'black';
 }
 
-.details-list li strong {
-    color: #374151;
+.user-data li strong {
+    color: 'black';
     margin-right: 8px;
 }
 
-.empty-cart-message {
-    color: #6b7280;
-    font-style: italic;
-}
-
-.profile-actions {
+.button-container {
     margin-top: 2.5rem;
     text-align: right;
 }
 
 .delete-account-button {
-    padding: 0.7rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     background-color: #ef4444;
-    color: white;
+    color: #fefefe;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
 }
 
 .delete-account-button:hover {
-    background-color: #dc2626;
-    transform: translateY(-2px);
-}
-
-.delete-account-button:active {
-    transform: translateY(0);
+    background-color: #9e1e1e;
 }
