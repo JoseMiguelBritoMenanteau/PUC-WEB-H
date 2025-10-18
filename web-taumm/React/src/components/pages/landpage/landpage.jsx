@@ -41,9 +41,16 @@ const LandPage = () => {
                 </div>
                 <button className='carrusel-flecha derecha' onClick={handleRight} > &gt; </button>
             </div>
+
+            <div className = 'info-container'>
+                <p> Nosotros </p>
+            </div>
         </div>
     )
 }
 
 
 export default LandPage;
+
+
+
