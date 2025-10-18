@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import './Profile.css'
 
-import { useAuthContext } from '../../../context/Context';
+import { useAuthContext } from '../../../context/Context.jsx';
 
 const Profile = () => {
 
