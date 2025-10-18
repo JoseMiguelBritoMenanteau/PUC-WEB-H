@@ -7,22 +7,26 @@ const griferiaGeneral = [
   {
     codigo: "041006007-T",
     descripcion: "Desagüe 1.1/4\" Lavatorio Plástico",
-    foto: img1
+    foto: img1,
+    precio: "CLP 4.990"
   },
   {
     codigo: "041006003-T",
     descripcion: "Desagüe Automático Lavatorio Plástico",
-    foto: img2
+    foto: img2,
+    precio: "CLP 5.990"
   },
   {
     codigo: "041801001-T",
     descripcion: "Combinación Quirúrgica 8\"",
-    foto: img3
+    foto: img3,
+    precio: "CLP 6.990"
   },
   {
     codigo: "041802001-T",
     descripcion: "Cuello Cisne para Mesa",
-    foto: img4
+    foto: img4,
+    precio: "CLP 7.990" 
   },
 ];
 

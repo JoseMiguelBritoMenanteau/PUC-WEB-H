@@ -7,22 +7,26 @@ const fittingLaton = [
   {
     codigo: "110930001-T",
     descripcion: "Cartridge 1/2\" Otra Forma N",
-    foto: img1
+    foto: img1,
+    precio: "CLP 2.990"
   },
   {
     codigo: "111040001-T",
     descripcion: "Cartridge 3/4\" Otra Forma N",
-    foto: img2
+    foto: img2,
+    precio: "CLP 1.990"
   },
   {
     codigo: "111040011-T",
     descripcion: "Cartridge 3/4\" Campana Cromada F",
-    foto: img3
+    foto: img3,
+    precio: "CLP 1.990"
   },
   {
     codigo: "111322204-T",
     descripcion: "Tee Dentada 3/8\" con 3 Abrazaderas",
-    foto: img4
+    foto: img4,
+    precio: "CLP 3.990"
   },
 ];
 

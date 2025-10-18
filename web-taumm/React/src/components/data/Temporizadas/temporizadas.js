@@ -7,22 +7,26 @@ const temporizadas = [
   {
     codigo: "100010100-T",
     descripcion: "Llave Lavatorio Tempor Punta Cuadrada",
-    foto: img1
+    foto: img1,
+    precio: "CLP 19.990"
   },
   {
     codigo: "100010300-T",
     descripcion: "Llave Lavatorio Temporizada Gorda",
-    foto: img2
+    foto: img2,
+    precio: "CLP 16.990"
   },
   {
     codigo: "100010150-T",
     descripcion: "Llave al Muro Temporizada Larga",
-    foto: img3
+    foto: img3,
+    precio: "CLP 18.990"
   },
   {
     codigo: "100010500-T",
     descripcion: "Urinario Botón sin Válvula Corte",
-    foto: img4
+    foto: img4,
+    precio: "CLP 34.990"
   },
 ];
 

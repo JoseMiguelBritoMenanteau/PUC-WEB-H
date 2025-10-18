@@ -7,22 +7,26 @@ const fitingBonce = [
   {
     codigo: "080143000-T",
     descripcion: "Bushing HE-HI 3/4\" x 1/2\"",
-    foto: img1
+    foto: img1,
+    precio: "CLP 2.490"
   },
   {
     codigo: "080154000-T",
     descripcion: "Bushing HE-HI 1\" x 3/4\"",
-    foto: img2
+    foto: img2,
+    precio: "CLP 3.290"
   },
   {
     codigo: "080165000-T",
     descripcion: "Bushing HE-HI 1.1/4\" x 1\"",
-    foto: img3
+    foto: img3,
+    precio: "CLP 1.990"
   },
   {
     codigo: "080233000-T",
     descripcion: "Codo HI-HE 1/2\"",
-    foto: img4
+    foto: img4,
+    precio: "CLP 2.990"
   },
 ];
 

@@ -8,22 +8,26 @@ const monomandos = [
 	{
 		codigo: "010100102-T",
 		descripcion: "MonoMando Lavatorio Colomba",
-		foto: img1
+		foto: img1,
+		precio: "CLP 8.990"
 	},
 	{
 		codigo: "010300102-T",
 		descripcion: "MonoMando TinaDucha Colomba",
-		foto: img2
+		foto: img2,
+		precio: "CLP 12.990"
 	},
 	{
 		codigo: "010400102-T",
 		descripcion: "MonoMando Ducha Colomba",
-		foto: img3
+		foto: img3,
+		precio: "CLP 9.990"
 	},
 	{
 		codigo: "010600102-T",
 		descripcion: "MonoMando LavaPlato Vertical Colomba",
-		foto: img4
+		foto: img4,
+		precio: "CLP 11.990"
 	},
 	
 ];
