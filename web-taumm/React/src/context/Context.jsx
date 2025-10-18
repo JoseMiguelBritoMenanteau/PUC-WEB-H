@@ -1,14 +1,14 @@
 import React, { useState, createContext, useContext, useEffect } from 'react';
 
-import { jwtDecode} from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 
 
 
-const Context = createContext(null);
+const AuthContext = createContext(null);
 
 
-export const Share = ({children}) => {
+export const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
 
     useEffect(() => {
@@ -34,13 +34,13 @@ export const Share = ({children}) => {
         setUser(null);
     };
     return (
-        <Context.Share value = {{ user, login, logout }}>
+        <AuthContext.Provider value = {{ user, login, logout }}>
             {children}
-        </Context.Share>
+        </AuthContext.Provider>
     );
 };
 
 export const useAuthContext = () => {
-    return useContext(Context);
+    return useContext(AuthContext);
 };
 
