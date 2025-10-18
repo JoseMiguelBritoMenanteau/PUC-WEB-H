@@ -7,7 +7,7 @@ import { useAuthContext } from '../../../context/Context.jsx';
 const Profile = () => {
 
     const navigate = useNavigate();
-    const { user, logout } = useAuthContext();
+    const { logout } = useAuthContext();
     const [currentUserDetails, setCurrentUserDetails] = useState(null);
 
     const handleDeleteAccount = async () => {
@@ -21,7 +21,8 @@ const Profile = () => {
                     }
                 });
                 if (response.ok) {
-                    localStorage.removeItem('token');
+                    //localStorage.removeItem('token');
+                    logout()
                     navigate('/');
                 } else {
                     console.error('Error al eliminar la cuenta');
@@ -38,7 +39,7 @@ const Profile = () => {
             try {
                 const response = await fetch ('http://localhost:8000/users/me', {
                     method: 'GET',
-                    headers: {'Authorization': `bearer ${token}`}
+                    headers: {'Authorization': `Bearer ${token}`}
                 });
                 if (response.ok) {
                     const data = await response.json();
@@ -50,17 +51,17 @@ const Profile = () => {
                 }
             } catch (errorr) {
                 console.error('Error', errorr);
-                alert('Error para cargar el perfil');
+                alert('Error para cargar el perfil, contáctate con soporte (jbritomenanteau@gmail.com / gaspar_berner@gmail.com)');
                 logout();
                 navigate('/signin');
             }
         };
-        if(user) {
-            fetchUserDetails();
-        } else {
-            navigate('/signin');
-        }
-    }, [user, navigate, logout])
+        fetchUserDetails();
+    }, [navigate, logout]);
+
+    if (!currentUserDetails) {
+        return <div className = 'profile-page-container'> Cargando tus datos... </div>
+    };
 
     return (
         //<div className = 'container-profile'>
@@ -72,7 +73,7 @@ const Profile = () => {
         <div className='profile-page-container'>
             <div className='profile-header'>
                 <h1>Mi Perfil</h1>
-                <h2>Bienvenido de vuelta, {currentUserDetails.username}!</h2>
+                <h2>Bienvenido de vuelta, {currentUserDetails.username}</h2>
             </div>
 
             <div className='profile-content'>
