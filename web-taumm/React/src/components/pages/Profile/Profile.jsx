@@ -59,11 +59,15 @@ const Profile = () => {
         fetchUserDetails();
     }, [navigate, logout]);
 
+    if (!currentUserDetails) {
+        return <div className='profile-page-container'>Cargando perfil...</div>;
+    }
+
 
     return (
 
         <div className='profile-page-container'>
-            <div className='profile-header'>
+            <div className='profile-title'>
                 <h1>Mi Perfil</h1>
                 <h2>Bienvenido al Paradiso, {currentUserDetails.username}</h2>
             </div>
@@ -71,7 +75,7 @@ const Profile = () => {
             <div className='profile-content'>
                 <div className='section'>
                     <h3> Tu Cuenta </h3>
-                    <ul className="details-list">
+                    <ul className="user-data">
                         <li> <strong> Nombre de Usuario: </strong> {currentUserDetails.username}</li>
                         <li> <strong> Email: </strong> {currentUserDetails.email}</li>
                         <li> <strong> Teléfono: </strong> {currentUserDetails.phone_number}</li>
@@ -86,7 +90,7 @@ const Profile = () => {
                 </div>
             </div>
 
-            <div className='profile-actions'>
+            <div className = 'button-container'>
                 <button onClick={handleDeleteAccount} className = 'delete-account-button'>
                     Eliminar Cuenta
                 </button>
